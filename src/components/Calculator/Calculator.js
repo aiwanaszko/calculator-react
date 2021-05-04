@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./components/Button";
+import Button from "../Button/Button";
 
 export default function Calculator() {
   return (
