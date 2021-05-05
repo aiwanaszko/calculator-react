@@ -1,9 +1,13 @@
 export const evaluate = (input) => {
   const trimmedInput = input.trim();
   const splittedInput = trimmedInput.split(/([+-])/);
-  let result = parseFloat(splittedInput[0]);
+  const startsWithNegativeNumber = splittedInput[0] === "";
+  const firstNumberIndex = startsWithNegativeNumber ? 2 : 0;
+  let result = startsWithNegativeNumber
+    ? parseFloat(splittedInput[firstNumberIndex]) * -1
+    : parseFloat(splittedInput[firstNumberIndex]);
 
-  for (let i = 1; i < splittedInput.length - 1; i++) {
+  for (let i = firstNumberIndex + 1; i < splittedInput.length - 1; i++) {
     const operator = splittedInput[i];
 
     if (operator === "+") {
