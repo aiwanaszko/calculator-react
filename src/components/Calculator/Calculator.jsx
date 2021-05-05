@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Display from "../Display/Display";
 import Button from "../Button/Button";
 import "./Calculator.scss";
-//import logo from "../../public/DCMN_logo.png";
+//import logo from "../../assets/DCMN_logo.png";
+import { evaluate } from "../../utils/math.js";
 
 class Calculator extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Calculator extends Component {
   };
 
   handleEqual = () => {
-    // evaluate
+    this.setState({ result: evaluate(this.state.equation) });
   };
 
   render() {
@@ -53,7 +54,7 @@ class Calculator extends Component {
             </Button>
             <Button handleClick={this.addToInput}>0</Button>
             <Button handleClick={this.addToInput}>.</Button>
-            <Button>=</Button>
+            <Button handleClick={this.handleEqual}>=</Button>
           </div>
         </div>
       </div>
