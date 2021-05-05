@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Display correctly 1`] = `
+<div
+  className="display"
+>
+  <div
+    className="equation-row"
+  >
+    <input
+      readOnly={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="result-row"
+  >
+    <input
+      readOnly={true}
+      type="text"
+    />
+  </div>
+</div>
+`;

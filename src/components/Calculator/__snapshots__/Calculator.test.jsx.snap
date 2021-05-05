@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Calculator correctly 1`] = `
+<div
+  className="calculator-wrapper"
+>
+  <img
+    className="logo"
+    src="DCMN_logo.png"
+  />
+  <div
+    className="calculator-container"
+  >
+    <div
+      className="display"
+    >
+      <div
+        className="equation-row"
+      >
+        <input
+          readOnly={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="result-row"
+      >
+        <input
+          readOnly={true}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="buttons-container"
+    >
+      <div
+        className="column"
+      >
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          7
+        </div>
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          4
+        </div>
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          1
+        </div>
+        <div
+          className="button-wrapper operator"
+          onClick={[Function]}
+        >
+          AC
+        </div>
+      </div>
+      <div
+        className="column"
+      >
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          8
+        </div>
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          5
+        </div>
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          2
+        </div>
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          0
+        </div>
+      </div>
+      <div
+        className="column"
+      >
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          9
+        </div>
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          6
+        </div>
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          3
+        </div>
+        <div
+          className="button-wrapper "
+          onClick={[Function]}
+        >
+          .
+        </div>
+      </div>
+      <div
+        className="column"
+      >
+        <div
+          className="button-wrapper operator"
+          onClick={[Function]}
+        >
+          +
+        </div>
+        <div
+          className="button-wrapper operator"
+          onClick={[Function]}
+        >
+          -
+        </div>
+        <div
+          className="button-wrapper equality-operator"
+          onClick={[Function]}
+        >
+          =
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
