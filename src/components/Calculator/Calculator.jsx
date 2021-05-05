@@ -17,12 +17,16 @@ class Calculator extends Component {
     this.setState({ equation: this.state.equation + val });
   };
 
+  handleEqual = () => {
+    // evaluate
+  };
+
   render() {
     return (
       <div className="calculator-wrapper">
         {/* <img className="logo" src={logo}></img> */}
         <div className="container">
-          <Display />
+          <Display equation={this.state.equation} result={this.state.result} />
           <div className="row">
             <Button handleClick={this.addToInput}>7</Button>
             <Button handleClick={this.addToInput}>8</Button>
@@ -42,7 +46,11 @@ class Calculator extends Component {
             <Button handleClick={this.addToInput}>-</Button>
           </div>
           <div className="row">
-            <Button>C</Button>
+            <Button
+              handleClick={() => this.setState({ equation: "", result: "" })}
+            >
+              {this.state.equation === 0 ? "AC" : "C"}
+            </Button>
             <Button handleClick={this.addToInput}>0</Button>
             <Button handleClick={this.addToInput}>.</Button>
             <Button>=</Button>

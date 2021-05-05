@@ -5,8 +5,8 @@ import ResultRow from "../ResultRow/ResultRow";
 export default function Display(props) {
   return (
     <div className="display">
-      <EquationRow />
-      <ResultRow />
+      <EquationRow value={props.equation} />
+      <ResultRow value={props.result} />
     </div>
   );
 }
