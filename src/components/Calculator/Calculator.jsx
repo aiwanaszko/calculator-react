@@ -50,7 +50,7 @@ class Calculator extends Component {
             <Button
               handleClick={() => this.setState({ equation: "", result: "" })}
             >
-              {this.state.equation === 0 ? "AC" : "C"}
+              {this.state.equation === "" ? "AC" : "C"}
             </Button>
             <Button handleClick={this.addToInput}>0</Button>
             <Button handleClick={this.addToInput}>.</Button>
