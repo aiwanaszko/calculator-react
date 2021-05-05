@@ -16,5 +16,8 @@ describe("math.js", () => {
   it("rounds numbers correctly", () => {
     expect(round(evaluate(".1+.2"))).toEqual(0.3);
     expect(round(evaluate(".5-.3"))).toEqual(0.2);
+    expect(round(evaluate("-.7-.2+.3+.1-.4"))).toEqual(-0.9);
+    expect(round(evaluate("-0.365-0.200"))).toEqual(-0.565);
+    expect(round(evaluate("-0.85442+0.213435"))).toEqual(-0.640985);
   });
 });
