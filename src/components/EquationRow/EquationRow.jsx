@@ -1,8 +1,9 @@
 import React from "react";
+import "./EquationRow.scss";
 
 export default function EquationRow(props) {
   return (
-    <div>
+    <div className="equation-row">
       <input type="text" readOnly />
     </div>
   );

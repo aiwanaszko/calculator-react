@@ -1,8 +1,9 @@
 import React from "react";
+import "./ResultRow.scss";
 
 export default function ResultRow(props) {
   return (
-    <div>
+    <div className="result-row">
       <input type="text" readOnly />
     </div>
   );

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Display from "../Display/Display";
 import Button from "../Button/Button";
 import "./Calculator.scss";
 //import logo from "../../public/DCMN_logo.png";
 
 export default function Calculator() {
+  const [equation, setEquation] = useState("");
+  const [result, setResult] = useState("");
   return (
     <div className="calculator-wrapper">
       {/* <img className="logo" src={logo}></img> */}
