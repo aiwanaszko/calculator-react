@@ -1,5 +1,7 @@
 # React Calculator
 
+Basic calculator built with React, with addition and subtraction.
+
 ## Project setup
 
 In the project directory, you can run:
