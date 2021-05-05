@@ -3,7 +3,7 @@ import Display from "../Display/Display";
 import Button from "../Button/Button";
 import "./Calculator.scss";
 import logo from "../../assets/DCMN_logo.png";
-import { evaluate } from "../../utils/math.js";
+import { evaluate, round } from "../../utils/math.js";
 
 class Calculator extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Calculator extends Component {
   };
 
   handleEqual = () => {
-    this.setState({ result: evaluate(this.state.equation) });
+    this.setState({ result: round(evaluate(this.state.equation)) });
   };
 
   render() {
