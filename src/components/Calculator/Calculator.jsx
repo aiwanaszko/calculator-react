@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Display from "../Display/Display";
 import Button from "../Button/Button";
 import "./Calculator.scss";
-//import logo from "../../assets/DCMN_logo.png";
+import logo from "../../assets/DCMN_logo.png";
 import { evaluate } from "../../utils/math.js";
 
 class Calculator extends Component {
@@ -25,7 +25,7 @@ class Calculator extends Component {
   render() {
     return (
       <div className="calculator-wrapper">
-        {/* <img className="logo" src={logo}></img> */}
+        <img className="logo" src={logo}></img>
         <div className="container">
           <Display equation={this.state.equation} result={this.state.result} />
           <div className="row">
