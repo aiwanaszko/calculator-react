@@ -17,5 +17,5 @@ export const evaluate = (input) => {
 };
 
 export const round = (input) => {
-  return input.toFixed(6);
+  return parseFloat(input.toFixed(6));
 };

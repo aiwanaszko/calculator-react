@@ -8,8 +8,8 @@ describe("math.js", () => {
     expect(evaluate("324-53+145-23")).toEqual(393);
   });
 
-  it("rounds number correctly", () => {
-    expect(round(evaluate(".1+.2"))).toEqual("0.300000");
-    expect(round(evaluate(".5-.3"))).toEqual("0.200000");
+  it("rounds numbers correctly", () => {
+    expect(round(evaluate(".1+.2"))).toEqual(0.3);
+    expect(round(evaluate(".5-.3"))).toEqual(0.2);
   });
 });
