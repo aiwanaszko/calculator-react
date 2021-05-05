@@ -4,7 +4,7 @@ import ResultRow from "../ResultRow/ResultRow";
 
 export default function Display(props) {
   return (
-    <div>
+    <div className="display">
       <EquationRow />
       <ResultRow />
     </div>
