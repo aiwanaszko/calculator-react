@@ -26,35 +26,39 @@ class Calculator extends Component {
     return (
       <div className="calculator-wrapper">
         <img className="logo" src={logo}></img>
-        <div className="container">
+        <div className="calculator-container">
           <Display equation={this.state.equation} result={this.state.result} />
-          <div className="row">
-            <Button handleClick={this.addToInput}>7</Button>
-            <Button handleClick={this.addToInput}>8</Button>
-            <Button handleClick={this.addToInput}>9</Button>
-            <Button handleClick={this.addToInput}>+</Button>
-          </div>
-          <div className="row">
-            <Button handleClick={this.addToInput}>4</Button>
-            <Button handleClick={this.addToInput}>5</Button>
-            <Button handleClick={this.addToInput}>6</Button>
-            <Button handleClick={this.addToInput}>-</Button>
-          </div>
-          <div className="row">
-            <Button handleClick={this.addToInput}>1</Button>
-            <Button handleClick={this.addToInput}>2</Button>
-            <Button handleClick={this.addToInput}>3</Button>
-            <Button handleClick={this.addToInput}>-</Button>
-          </div>
-          <div className="row">
-            <Button
-              handleClick={() => this.setState({ equation: "", result: "" })}
-            >
-              {this.state.equation === "" ? "AC" : "C"}
-            </Button>
-            <Button handleClick={this.addToInput}>0</Button>
-            <Button handleClick={this.addToInput}>.</Button>
-            <Button handleClick={this.handleEqual}>=</Button>
+          <div className="buttons-container">
+            <div className="column">
+              <Button handleClick={this.addToInput}>7</Button>
+              <Button handleClick={this.addToInput}>4</Button>
+              <Button handleClick={this.addToInput}>1</Button>
+              <Button
+                handleClick={() => this.setState({ equation: "", result: "" })}
+              >
+                {this.state.equation === "" ? "AC" : "C"}
+              </Button>
+            </div>
+
+            <div className="column">
+              <Button handleClick={this.addToInput}>8</Button>
+              <Button handleClick={this.addToInput}>5</Button>
+              <Button handleClick={this.addToInput}>2</Button>
+              <Button handleClick={this.addToInput}>0</Button>
+            </div>
+
+            <div className="column">
+              <Button handleClick={this.addToInput}>9</Button>
+              <Button handleClick={this.addToInput}>6</Button>
+              <Button handleClick={this.addToInput}>3</Button>
+              <Button handleClick={this.addToInput}>.</Button>
+            </div>
+
+            <div className="column">
+              <Button handleClick={this.addToInput}>+</Button>
+              <Button handleClick={this.addToInput}>-</Button>
+              <Button handleClick={this.handleEqual}>=</Button>
+            </div>
           </div>
         </div>
       </div>

@@ -17,16 +17,30 @@
   font-weight: bold;
 }
 
-.container {
+.calculator-container {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.buttons-container {
   background-color: black;
   border-radius: 5px;
   width: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   padding: 5px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {

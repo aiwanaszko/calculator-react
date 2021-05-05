@@ -8,9 +8,15 @@
   border-radius: 50%;
   background-color: #333333;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .operator {
   background-color: #fe9f06;
   color: white;
+}
+
+.equality-operator {
+  height: 180px;
+  background-color: #fe9f06;
 }

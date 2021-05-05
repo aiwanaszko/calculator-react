@@ -2,14 +2,22 @@ import React from "react";
 import "./Button.scss";
 
 const isOperator = (val) => {
-  return !isNaN(val) || val === ".";
+  return val === "+" || val === "-" || val === "AC" || val === "C";
+};
+
+const isEqualityOperator = (val) => {
+  return val === "=";
 };
 
 export default function Button(props) {
   return (
     <div
       className={`button-wrapper ${
-        isOperator(props.children) ? "" : "operator"
+        isOperator(props.children)
+          ? "operator"
+          : isEqualityOperator(props.children)
+          ? "equality-operator"
+          : ""
       }`}
       onClick={() => props.handleClick(props.children)}
     >
