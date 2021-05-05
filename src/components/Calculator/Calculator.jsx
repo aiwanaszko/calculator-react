@@ -16,7 +16,7 @@ class Calculator extends Component {
 
   addToInput = (val) => {
     if (this.state.equation.length === 0 && val === "+") {
-      return;
+      return this.state.equation;
     } else if (this.state.equation === "-" && val === "-") {
       return;
     }

@@ -1,18 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
-
 .calculator-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(234, 72, 93, 1) 50%,
-    rgba(217, 181, 44, 1) 100%
-  );
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -25,16 +16,10 @@
 .buttons-container {
   background-color: black;
   border-radius: 5px;
-  width: 400px;
+
   display: flex;
   justify-content: space-between;
   padding: 0px 10px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
 }
 
 .column {
