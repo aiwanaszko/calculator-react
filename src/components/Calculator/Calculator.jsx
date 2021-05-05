@@ -1,47 +1,56 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import Display from "../Display/Display";
 import Button from "../Button/Button";
 import "./Calculator.scss";
 //import logo from "../../public/DCMN_logo.png";
 
-export default function Calculator() {
-  const [equation, setEquation] = useState("");
-  const [result, setResult] = useState("");
+class Calculator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      equation: "",
+      result: "",
+    };
+  }
 
-  const addToInput = () => {
-    console.log("xx");
+  addToInput = (val) => {
+    this.setState({ equation: this.state.equation + val });
   };
 
-  return (
-    <div className="calculator-wrapper">
-      {/* <img className="logo" src={logo}></img> */}
-      <div className="container">
-        <Display />
-        <div className="row">
-          <Button handleClick={addToInput}>7</Button>
-          <Button handleClick={addToInput}>8</Button>
-          <Button handleClick={addToInput}>9</Button>
-          <Button handleClick={addToInput}>+</Button>
-        </div>
-        <div className="row">
-          <Button handleClick={addToInput}>4</Button>
-          <Button handleClick={addToInput}>5</Button>
-          <Button handleClick={addToInput}>6</Button>
-          <Button handleClick={addToInput}>-</Button>
-        </div>
-        <div className="row">
-          <Button handleClick={addToInput}>1</Button>
-          <Button handleClick={addToInput}>2</Button>
-          <Button handleClick={addToInput}>3</Button>
-          <Button handleClick={addToInput}>-</Button>
-        </div>
-        <div className="row">
-          <Button>C</Button>
-          <Button handleClick={addToInput}>0</Button>
-          <Button>.</Button>
-          <Button>=</Button>
+  render() {
+    return (
+      <div className="calculator-wrapper">
+        {/* <img className="logo" src={logo}></img> */}
+        <div className="container">
+          <Display />
+          <div className="row">
+            <Button handleClick={this.addToInput}>7</Button>
+            <Button handleClick={this.addToInput}>8</Button>
+            <Button handleClick={this.addToInput}>9</Button>
+            <Button handleClick={this.addToInput}>+</Button>
+          </div>
+          <div className="row">
+            <Button handleClick={this.addToInput}>4</Button>
+            <Button handleClick={this.addToInput}>5</Button>
+            <Button handleClick={this.addToInput}>6</Button>
+            <Button handleClick={this.addToInput}>-</Button>
+          </div>
+          <div className="row">
+            <Button handleClick={this.addToInput}>1</Button>
+            <Button handleClick={this.addToInput}>2</Button>
+            <Button handleClick={this.addToInput}>3</Button>
+            <Button handleClick={this.addToInput}>-</Button>
+          </div>
+          <div className="row">
+            <Button>C</Button>
+            <Button handleClick={this.addToInput}>0</Button>
+            <Button handleClick={this.addToInput}>.</Button>
+            <Button>=</Button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default Calculator;
