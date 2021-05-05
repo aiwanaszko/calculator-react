@@ -1,9 +1,12 @@
 import React from "react";
+import Display from "../Display/Display";
 import Button from "../Button/Button";
+import "./Calculator.scss";
 
 export default function Calculator() {
   return (
     <div className="container">
+      <Display />
       <div className="row">
         <Button>7</Button>
         <Button>8</Button>

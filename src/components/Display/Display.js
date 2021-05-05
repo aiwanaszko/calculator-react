@@ -1,6 +1,6 @@
 import React from "react";
-import EquationRow from "./components/EquationRow";
-import ResultRow from "./components/ResultRow";
+import EquationRow from "../EquationRow/EquationRow";
+import ResultRow from "../ResultRow/ResultRow";
 
 export default function Display(props) {
   return (
